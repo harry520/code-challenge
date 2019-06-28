@@ -21,11 +21,13 @@ public class ViewPagerAdapter extends PagerAdapter {
     private Context context;
     private List<Result> results;
     private String answer;
+    private GenericCallback<Boolean> genericCallback;
+    private Boolean isButtonsDisabled = false;
 
-
-    public ViewPagerAdapter(Context context, List<Result> results) {
+    public ViewPagerAdapter(Context context, List<Result> results, GenericCallback<Boolean> genericCallback) {
         this.context = context;
         this.results = results;
+        this.genericCallback = genericCallback;
     }
 
     @Override
@@ -74,6 +76,8 @@ public class ViewPagerAdapter extends PagerAdapter {
                     radioButtonTrue.setEnabled(false);
                     radioButtonFalse.setEnabled(false);
                     buttonConfirmNext.setEnabled(false);
+                    isButtonsDisabled = true;
+                    genericCallback.onResponse(isButtonsDisabled);
                 }
             }
         });
