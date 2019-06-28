@@ -24,7 +24,7 @@ When the button is clicked, it checks if a RadioButton is clicked, if not it dis
 Click the button again, it will save either "Ture" or "False" to a String called answer based on the RadioButton selected. and compare with the correct_answer we get from the API response. If there is a match, TextView displays "Correct", if not, the TextView displays "Wrong".
 The RadioButtons and Button then are disabled.
 # Local environment setup instructions
-The app is written in Java in Android Atudio.
-Android Studio is needed to run the app.
-The minSdkVersion is 24.
+The app is written in Java in Android Atudio. <br />
+Android Studio is needed to run the app. <br />
+The minSdkVersion is 24.<br />
 An emulator or Android phone running Android 7.0 Nugget or above is required to run the app.
